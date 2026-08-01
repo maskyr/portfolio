@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project case study by Masha Kyryliva.">
+  <title>Project Case Study — Masha Kyryliva</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="project-page">
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <header class="nav-shell">
+    <nav class="nav" aria-label="Project navigation">
+      <a href="index.html#top" class="nav-mark" aria-label="Masha Kyryliva home"><span>MK</span></a>
+      <a class="back-link" href="index.html#projects"><span aria-hidden="true">←</span> Back to portfolio</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <div class="case-heading reveal">
+        <p class="hero-kicker">Project 02</p>
+        <h1>Digital Heart<br><em>Simulator</em></h1>
+        <p class="case-deck">
+         I designed an interactive digital heart simulation that helps learners understand how heart rate, electrical activation,
+          and ECG patterns change together in real time.
+        </p>
+      </div>
+
+      <div class="case-meta reveal">
+        <div>
+          <span class="meta-label">Role</span>
+          <span>Designer & Developer</span>
+        </div>
+        <div>
+          <span class="meta-label">Timeline</span>
+          <span>May - June 2026</span>
+        </div>
+        <div>
+          <span class="meta-label">Tools</span>
+          <span>MATLAB</span>
+        </div>
+        <div>
+          <span class="meta-label">Team</span>
+          <span>Individual</span>
+        </div>
+      </div>
+
+    <div class="case-cover reveal">
+  <img src="digitalheartgif2.gif" alt="Digital Heart Simulator demo" class="case-cover-image">
+</div>
+    </section>
+
+    <section class="case-section reveal">
+      <div class="case-section-number">01</div>
+      <div class="case-section-title">
+        <p>The context</p>
+        <h2>Connect the heartbeat to <br>
+          <em>the data.</em></h2>
+      </div>
+      <div class="case-section-copy">
+        <p class="case-lead">
+          The cardiac signal is hard to understand when the heart's motion,
+           electrical activity, and ECG data are displayed separately.
+        </p>
+        <p>
+         Biomedical engineering students and other learners often struggle to connect the ECG waveforms to the physical 
+         and electrical processes occurring inside the heart. In this project, 
+         all these factors are brought into one interactive simulation, 
+         allowing users to adjust the heart rate to see the effect on the heartbeat, 
+         electrical activation, ECG signal, frequency spectrum, and spectrogram.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="case-section reveal">
+      <div class="case-section-number">02</div>
+      <div class="case-section-title">
+        <p>The process</p>
+        <h2>From signal to<br>
+          <em>simulation.</em></h2>
+      </div>
+      <div class="case-section-copy">
+        <p class="case-lead">
+          Understanding the physiology came before writing a single line of code. 
+        </p>
+        <p>
+          I started by researching the relationship between ECG signals and the electrical activity of the heart, since I needed to understand the physiology before I could simulate it accurately. 
+          After this, I built a MATLAB pipeline that generates the signal, spectrum, 
+          and spectrogram all at once and tested it out by comparing output against known ECG waveform shapes.
+        </p>
+
+        <div class="process-list">
+          <div>
+            <span>01</span>
+            <strong>Research</strong>
+            <p>Studied cardiac electrophysiology and ECG waveform structure.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Build</strong>
+            <p>Developed signal processing & 3D activation model in MATLAB.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Test</strong>
+            <p>Validated the output through reference ECG patterns."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="next-project reveal">
+      <p>Next project</p>
+      <a href="index.html#projects">Return to selected work <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <span class="footer-name">Masha Kyryliva</span>
+      <span class="footer-role">Biomedical Engineering</span>
+    </div>
+    <div class="footer-right">
+      <a href="#top">Back to top ↑</a>
+      <span>© <span data-current-year>2026</span></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
