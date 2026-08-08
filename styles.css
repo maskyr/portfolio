@@ -1,7 +1,4 @@
-/* ========================================================================== 
-   Masha Kyryliva — Portfolio
-   Editorial brown, blush, and green visual system
-   ========================================================================== */
+
 
 :root {
   --cream: #f5efe8;
@@ -86,7 +83,6 @@ svg {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
 }
 
-/* Navigation ---------------------------------------------------------------- */
 
 .nav-shell {
   position: fixed;
@@ -197,7 +193,6 @@ svg {
   letter-spacing: 0.04em;
 }
 
-/* Shared -------------------------------------------------------------------- */
 
 .section {
   width: var(--page);
@@ -382,7 +377,6 @@ h1 em {
   transform: translateY(0);
 }
 
-/* Homepage hero ------------------------------------------------------------- */
 
 .hero {
   padding-top: 150px;
@@ -433,7 +427,7 @@ h1 em {
 .case-heading h1 {
   margin-bottom: 34px;
   font-family: var(--display);
-  font-size: clamp(3rem, 5.5vw, 5.5rem); /* smaller min/preferred/max */
+  font-size: clamp(3rem, 5.5vw, 5.5rem); 
   line-height: 0.9;
   letter-spacing: -0.06em;
 }
@@ -632,11 +626,8 @@ h1 em {
   to { transform: translateX(-50%); }
 }
 
-/* About --------------------------------------------------------------------- */
 
-.about-section {
-  border-bottom: 1px solid var(--line);
-}
+
 
 .about-grid {
   display: grid;
@@ -699,7 +690,6 @@ h1 em {
   line-height: 1.55;
 }
 
-/* Projects ------------------------------------------------------------------ */
 
 .projects-heading {
   margin-bottom: 60px;
@@ -910,8 +900,6 @@ h1 em {
   font-size: 2rem;
 }
 
-/* Contact + footer ---------------------------------------------------------- */
-
 .contact-section {
   padding: clamp(90px, 12vw, 150px) 24px;
   background: var(--brown);
@@ -983,7 +971,6 @@ h1 em {
   color: var(--pink-light);
 }
 
-/* Project case study -------------------------------------------------------- */
 
 .project-page {
   background: var(--paper);
@@ -1024,7 +1011,16 @@ h1 em {
   object-fit: cover;
   display: block;
 }
-
+.case-cover.ai-cover {
+  aspect-ratio: 1918 / 820;
+  min-height: 0;
+}
+.case-cover.chess-cover {
+  aspect-ratio: 397 / 421;
+  min-height: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
 .case-meta {
   margin: 70px 0 34px;
   padding: 24px 0;
@@ -1201,6 +1197,7 @@ h1 em {
 .gallery-section {
   padding: clamp(90px, 12vw, 160px) max(24px, calc((100vw - min(1180px, calc(100vw - 3rem))) / 2));
   background: var(--cream);
+  padding-top: 40px;
 }
 
 .gallery-heading {
@@ -1221,12 +1218,27 @@ h1 em {
   grid-template-columns: repeat(2, 1fr);
   gap: 18px;
 }
+.case-gallery-wide-hand {
+  grid-column: 1 / -1;
+  aspect-ratio: 4 / 3;
+  background: var(--cream-deep);
+}
 
+.case-gallery-item-hand {
+  aspect-ratio: 4 / 3;
+  background: var(--cream-deep);
+}
+.gallery-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .case-gallery-item {
-  min-height: 420px;
   padding: 22px;
-  display: flex;
-  align-items: end;
+  overflow: hidden;
   border-radius: var(--radius-lg);
   background:
     linear-gradient(145deg, transparent 35%, rgba(74, 48, 40, 0.07)),
@@ -1240,7 +1252,7 @@ h1 em {
 
 .case-gallery-wide {
   grid-column: 1 / -1;
-  min-height: 650px;
+  aspect-ratio: 589 / 297;
   background:
     radial-gradient(circle at 27% 32%, rgba(217, 155, 155, 0.45), transparent 27%),
     radial-gradient(circle at 73% 63%, rgba(104, 117, 90, 0.34), transparent 30%),
@@ -1248,10 +1260,12 @@ h1 em {
 }
 
 .case-gallery-pink {
+  aspect-ratio: 708 / 470;
   background: var(--pink-pale);
 }
 
 .case-gallery-green {
+  aspect-ratio: 541 / 470;
   background: var(--green-pale);
 }
 
@@ -1318,7 +1332,6 @@ h1 em {
   transform: translate(7px, -7px);
 }
 
-/* Responsive --------------------------------------------------------------- */
 
 @media (max-width: 980px) {
   .hero-grid,
@@ -1518,12 +1531,12 @@ h1 em {
   }
 
   .case-gallery-wide {
-    grid-column: auto;
-    min-height: 500px;
+    grid-column: 1/-1;
+    min-height: 220px;
   }
 
   .case-gallery-item {
-    min-height: 360px;
+    min-height: 150px;
   }
 
   .result-stat-grid {

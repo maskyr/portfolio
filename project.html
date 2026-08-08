@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Project case study by Masha Kyryliva.">
-  <title>Project Case Study — Masha Kyryliva</title>
+  <title>Project — Masha Kyryliva</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,149 +25,116 @@
   <main>
     <section class="case-hero">
       <div class="case-heading reveal">
-        <p class="hero-kicker">Case study · Project 01</p>
-        <h1>Project title<br><em>goes here.</em></h1>
+        <p class="hero-kicker">Project 01</p>
+        <h1>Gesture Controlled<br><em> Robotic Hand</em></h1>
         <p class="case-deck">
-          One clear sentence explaining what you designed, built, or researched—and
-          the human problem it was created to solve.
+          I designed and built a gesture controlled robotic hand that
+           mirrors a user’s finger movements in real time, making robotic control more natural and intuitive.
         </p>
       </div>
 
       <div class="case-meta reveal">
         <div>
           <span class="meta-label">Role</span>
-          <span>Your role</span>
+          <span>Mechatronics Designer & Developer</span>
         </div>
         <div>
           <span class="meta-label">Timeline</span>
-          <span>Month – Month 2026</span>
+          <span>January – April 2026</span>
         </div>
         <div>
           <span class="meta-label">Tools</span>
-          <span>Tool · Tool · Tool</span>
+          <span>Python · OpenCV · MediaPipe · ESP32 · PCA9685</span>
         </div>
         <div>
           <span class="meta-label">Team</span>
-          <span>Individual / Team</span>
+          <span>Individual</span>
         </div>
       </div>
 
       <div class="case-cover reveal">
-        <div class="case-cover-label">Hero project image</div>
-        <div class="case-cover-placeholder">
-          <svg viewBox="0 0 200 200" aria-hidden="true">
-            <circle cx="100" cy="100" r="53"/>
-            <circle cx="100" cy="100" r="19"/>
-            <path d="M100 19v43M100 138v43M19 100h43M138 100h43"/>
-            <path d="m43 43 31 31M126 126l31 31M157 43l-31 31M74 126l-31 31"/>
-          </svg>
-          <span>Replace with a high-quality image of your project</span>
-        </div>
-      </div>
+  <img src="handgif.gif" alt="Gesture Controlled Robotic Hand demo" class="case-cover-image">
+</div>
     </section>
 
     <section class="case-section reveal">
       <div class="case-section-number">01</div>
       <div class="case-section-title">
         <p>The context</p>
-        <h2>Start with the<br><em>why.</em></h2>
+        <h2>Turn movement into
+        <br><em>motion.</em></h2>
       </div>
       <div class="case-section-copy">
         <p class="case-lead">
-          Describe the real problem you noticed, who it affected, and why it was worth solving.
+          Robotic hands can feel difficult and unnatural to control especially where users have to rely on buttons or switches.
         </p>
         <p>
-          Keep this section concise and specific. Employers should understand the challenge
-          even if they have no background in the subject. Add useful constraints, research,
-          or observations that shaped your direction.
+          The normal ways of controlling robots create a separation between the movements that the user intends and the way the robotic arm responds.
+           In this project, computer vision tracks finger positions through a webcam and translates them into real-time servo commands, 
+          allowing the robotic hand to mirror gestures without requiring wearable sensors or manual controls.
         </p>
       </div>
-    </section>
-
-    <section class="case-highlight reveal">
-      <p>Design question</p>
-      <blockquote>“How might we create a solution that is technically strong, easy to use, and genuinely helpful?”</blockquote>
     </section>
 
     <section class="case-section reveal">
       <div class="case-section-number">02</div>
       <div class="case-section-title">
         <p>The process</p>
-        <h2>Show how you<br><em>think.</em></h2>
+        <h2>From gesture to <br><em>motion.</em></h2>
       </div>
       <div class="case-section-copy">
         <p class="case-lead">
-          Walk through the most important decisions—not every single step.
+          The key challenge was connecting computer vision, embedded control, and mechanical movement into one responsive system.
         </p>
         <p>
-          Explain what you tried, what changed, and how evidence influenced the outcome.
-          This is where your engineering judgement, collaboration, and problem-solving become visible.
+          I divided the project into three stages: detecting finger positions, translating those gestures into servo commands, 
+          and refining the physical hand mechanism. Each component could be tested individually,which made it easier to
+           identify whether problems came from the software, electronics, or mechanical design.
         </p>
 
         <div class="process-list">
           <div>
             <span>01</span>
-            <strong>Research</strong>
-            <p>What did you need to understand first?</p>
+            <strong>Track</strong>
+            <p>Tracked whether each finger was open or closed using MediaPipe hand landmarks through the webcam. </p>
           </div>
           <div>
             <span>02</span>
-            <strong>Build</strong>
-            <p>What did you prototype or implement?</p>
+            <strong>Control</strong>
+            <p>Transmitted real time commands from Python to an ESP32 that operated four servos via a PCA9685 driver.</p>
           </div>
           <div>
             <span>03</span>
-            <strong>Test</strong>
-            <p>How did you evaluate and improve it?</p>
+            <strong>Refine</strong>
+            <p>Calibrated servo direction, their angle limits, tendon tension, and return mechanisms to improve finger motion and responsiveness.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="gallery-section" id="gallery">
-      <div class="gallery-heading reveal">
-        <p class="hero-kicker">Project gallery</p>
-        <h2>Make the work<br><em>visible.</em></h2>
-      </div>
+   <section class="gallery-section" id="gallery">
+  <div class="gallery-heading reveal">
+    <p class="hero-kicker">Project gallery</p>
+  </div>
 
-      <div class="case-gallery">
-        <div class="case-gallery-item case-gallery-wide reveal">
-          <span>Image 01 · Prototype / interface / experiment</span>
-        </div>
-        <div class="case-gallery-item case-gallery-pink reveal">
-          <span>Image 02 · Detail</span>
-        </div>
-        <div class="case-gallery-item case-gallery-green reveal">
-          <span>Image 03 · Process</span>
-        </div>
-      </div>
-    </section>
+  <div class="case-gallery">
+    <div class="case-gallery-item case-gallery-wide-hand reveal">
+      <img src="hand1.jpg" alt="Robotic hand connected to control laptop" class="gallery-image">
+    </div>
 
-    <section class="case-section result-section reveal">
-      <div class="case-section-number">03</div>
-      <div class="case-section-title">
-        <p>The outcome</p>
-        <h2>End with<br><em>impact.</em></h2>
-      </div>
-      <div class="case-section-copy">
-        <p class="case-lead">
-          State what you produced, what improved, and what you learned.
-        </p>
-        <p>
-          Include measurable outcomes when available. When a project is still in progress,
-          be transparent and explain the next technical or design step.
-        </p>
+    <div class="case-gallery-item case-gallery-item-hand reveal">
+      <img src="hand2.jpg" alt="Close-up of servo motors inside the hand" class="gallery-image">
+    </div>
 
-        <div class="result-stat-grid">
-          <div><strong>01</strong><span>Key result</span></div>
-          <div><strong>02</strong><span>Lesson learned</span></div>
-          <div><strong>03</strong><span>Next step</span></div>
-        </div>
-      </div>
-    </section>
+    <div class="case-gallery-item case-gallery-item-hand reveal">
+      <img src="hand3.jpg" alt="Robotic hand gesture mirroring live camera feed" class="gallery-image">
+    </div>
+  </div>
+</section>
+
 
     <section class="next-project reveal">
-      <p>Next case study</p>
+      <p>Next project</p>
       <a href="index.html#projects">Return to selected work <span aria-hidden="true">↗</span></a>
     </section>
   </main>
